@@ -189,10 +189,6 @@ footer h2, footer a, footer span{
   display: block;
 }
 
-footer a{
-  padding: none;
-}
-
 address a:first-of-type{
   margin-top: 1rem;
 }
