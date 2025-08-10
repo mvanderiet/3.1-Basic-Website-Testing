@@ -144,10 +144,11 @@ nav a{
   display: block;
   text-align: center;
   padding:  1.5rem 1rem;
+  font-size: 1.5rem;
 }
 
 .active{
-  text-decoration: underline var(--light-green);
+  text-decoration: underline var(--white);
   text-decoration-thickness: 3px;
 }
 
@@ -156,7 +157,8 @@ p{
 }
 
 #homeMain p{
-  padding: 1rem;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 #aboutPlants{
@@ -175,6 +177,7 @@ p{
 footer section{
   max-width: 275px;
   margin: 1rem auto 0 auto;
+  padding-bottom: 1rem;
 }
 
 footer h2:first-of-type{
@@ -187,7 +190,7 @@ footer h2, footer a, footer span{
 }
 
 footer a{
-  padding: 1rem 0;
+  padding: none;
 }
 
 address a:first-of-type{
@@ -198,6 +201,7 @@ footer address{
   font-family: var(--body-font);
   color: var(--white);
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 #socialMedia{
@@ -220,6 +224,9 @@ footer address{
 }
 
 /* ------------------------MOBILE STYLES--------------------- */
+nav a {
+  font-size: 1rem;
+}
 
 header img{
   width: 90px;
@@ -236,12 +243,16 @@ header img{
   display: block;
 }
 
+article {
+  margin-top: 20px;
+}
+
 #aboutPlants{
   margin-bottom: 1rem;
 }
 
 #aboutPlants img, #contactUs img{
-  width: 60%;
+  width: 40%;
   max-width: 300px;
   margin: 0 auto;
 }
@@ -268,7 +279,7 @@ header img{
 @media screen and (min-width: 500px){
   header{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr 3fr;
     align-items: center;
   }
   
@@ -283,9 +294,32 @@ header img{
     width: 90px;
     margin: 0 auto;
   }
+
+  #hero{
+    width: 70%;
+  }
+
+  #homeMain p{
+    padding-left: 20%;
+    padding-right: 20%;
+  }
   
   nav{
-    grid-column: 1/-1;
+    grid-column: 3;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+
+  article {
+    margin-top: 20px;
+  }
+  #contactUs{
+    margin-bottom: 1rem;
+  }
+  footer a{
+    padding: 1rem 0;
   }
 }
 
@@ -296,6 +330,9 @@ header img{
     align-items: center;
     max-width: 680px;
     margin: 0 auto;
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   
   #contactUs div{
@@ -304,6 +341,9 @@ header img{
     align-items: center;
     max-width: 680px;
     margin: 0 auto;
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   
   #aboutPlants h3, #contactUs h3{
@@ -314,13 +354,18 @@ header img{
   #contactUs a{
     grid-column: 2/3;
   }
-  
+
   #aboutPlants img, #contactUs img{
-    width: 90%;
+    width: 100%;
+    margin: 0 auto;
   }
   
   #contactUs p{
-    grid-row: 2/3;
+    grid-row: 1;
+  }
+
+  footer address{
+    margin-bottom: 0;
   }
 }
 
@@ -344,14 +389,15 @@ header img{
   
   nav{
     grid-column: 3/-1;
-    max-width: 600px;
+    width: 100%;
     margin: 0 auto;
   }
   
   main article:last-of-type{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    height: 200px;
   }
   
   #aboutPlants{
@@ -370,5 +416,13 @@ header img{
 
   address a{
       padding: 0.5rem;
+  }
+
+  #homeMain img {
+    width: 50%;
+  }
+
+  #contactUs{
+    margin-bottom: 0;
   }
 }
